@@ -13,7 +13,7 @@
 package main
 
 import (
-	"github.com/icobani/CreatingWebApp/HTMLTemplates"
+	"github.com/icobani/CreatingWebApp/MVCViewLayer"
 )
 
 func main()  {
@@ -22,5 +22,7 @@ func main()  {
 	//HTML_Templates.StaticTemplateMain()
 	//HTML_Templates.TemplateUsingStringMain()
 	//HTML_Templates.BranchingLogicTemplatesMain()
-	HTML_Templates.SubTemplateMain()
+	//HTML_Templates.SubTemplateMain()
+	//MVCViewLayer.DeliveryStaticAssestMain()
+	MVCV
 }
