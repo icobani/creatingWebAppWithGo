@@ -18,6 +18,8 @@ import (
 	"text/template"
 	"strings"
 	"bufio"
+	"github.com/icobani/CreatingWebApp/ViewModels"
+	"fmt"
 )
 
 func CreatingViewModelAndSubTemplates() {
@@ -29,8 +31,13 @@ func CreatingViewModelAndSubTemplates() {
 			template :=
 				templates.Lookup(requestedFile + ".html")
 
+			var context interface{}
+			if requestedFile == "Home"{
+				context = ViewModels.GetHome()
+			}
 			if template != nil {
-				template.Execute(w, nil)
+				fmt.Println(context)
+				template.Execute(w, context)
 			} else {
 				w.WriteHeader(404)
 			}
