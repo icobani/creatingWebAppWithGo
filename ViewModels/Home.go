@@ -12,15 +12,20 @@
 *******/
 package ViewModels
 
+import "fmt"
+
 type Home struct {
-	Title  string
-	Active string
+	Title       string
+	Active      string
+	ProfileMenu []ProfileDropdownMenu
 }
 
 func GetHome() Home {
 	result := Home{
 		Title : "Performanse HR Programı",
 		Active : "Home",
+		ProfileMenu : GetProfileDropdownMenu(),
 	}
+	fmt.Println(result)
 	return result
 }

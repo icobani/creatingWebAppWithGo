@@ -24,5 +24,6 @@ func main()  {
 	//HTML_Templates.BranchingLogicTemplatesMain()
 	//HTML_Templates.SubTemplateMain()
 	//MVCViewLayer.DeliveryStaticAssestMain()
-	MVCViewLayer.CreatingViewModelAndSubTemplates()
+	//MVCViewLayer.CreatingViewModelAndSubTemplates()
+	MVCViewLayer.UsingCollectionsinTemplatesMain()
 }

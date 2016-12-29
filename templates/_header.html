@@ -42,12 +42,10 @@
             </span>
         </button>
         <ul class="dropdown-menu profile-dropdown" role="menu">
-          <li><a href="#"><i class="pg-settings_small"></i> Ayarlar</a>
+          {{range .}}
+          <li><a href="{{.HRefCode}}"><i class="{{.MenuIconClass}}"></i> {{.MenuTitle}}</a>
           </li>
-          <li><a href="#"><i class="pg-outdent"></i> Geribildirim</a>
-          </li>
-          <li><a href="#"><i class="pg-signals"></i> Yardım</a>
-          </li>
+          {{end}}
           <li class="bg-master-lighter">
             <a href="#" class="clearfix">
               <span class="pull-left">Çıkış</span>
