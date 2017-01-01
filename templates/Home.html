@@ -1,78 +1,32 @@
-<!DOCTYPE html>
-<html>
 {{template "_head.html" .Title}}
-<body class="fixed-header">
-<!-- BEGIN SIDEBAR -->
 {{template "_sidebarmenu.html" }}
-<!-- BEGIN SIDEBAR -->
-<!-- START PAGE-CONTAINER -->
-<div class="page-container">
-  <!-- START PAGE HEADER WRAPPER -->
-  <!-- START HEADER -->
-  {{template "_header.html" .ProfileMenu}}
-  <!-- END HEADER -->
-  <!-- END PAGE HEADER WRAPPER -->
-  <!-- START PAGE CONTENT WRAPPER -->
-  <div class="page-content-wrapper">
-    <!-- START PAGE CONTENT -->
-    <div class="content">
-      <!-- START JUMBOTRON -->
-      <div class="jumbotron" data-pages="parallax">
-        <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
-          <div class="inner">
-            <!-- START BREADCRUMB -->
-            <ul class="breadcrumb">
-              <li>
-                <p>Performans HR</p>
-              </li>
-              <li><a href="#" class="active">DASHBOARD</a>
-              </li>
-            </ul>
-            <!-- END BREADCRUMB -->
-          </div>
-        </div>
+{{template "_header.html" .ProfileMenu}}
+<!-- START PAGE CONTENT -->
+<div class="content">
+  <!-- START JUMBOTRON -->
+  <div class="jumbotron" data-pages="parallax">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="inner">
+        <!-- START BREADCRUMB -->
+        <ul class="breadcrumb">
+          <li>
+            <p>Performans HR</p>
+          </li>
+          <li><a href="#" class="active">Items</a>
+          </li>
+        </ul>
+        <!-- END BREADCRUMB -->
       </div>
-      <!-- END JUMBOTRON -->
-      <!-- START CONTAINER FLUID -->
-      <div class="container-fluid container-fixed-lg">
-        <!-- BEGIN PlACE PAGE CONTENT HERE -->
-        <span {{if eq .Active "home"}}class="thumbnail-wrapper d32 circular inline m-t-5"{{end}}>{{.Title}}</span>
-        <!-- END PLACE PAGE CONTENT HERE -->
-      </div>
-      <!-- END CONTAINER FLUID -->
     </div>
-    <!-- END PAGE CONTENT -->
-    <!-- START FOOTER -->
-    {{template "_footer.html"}}
-    <!-- END FOOTER -->
   </div>
-  <!-- END PAGE CONTENT WRAPPER -->
+  <!-- END JUMBOTRON -->
+  <!-- START CONTAINER FLUID -->
+  <div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <span {{if eq .Active "home"}}class="thumbnail-wrapper d32 circular inline m-t-5"{{end}}>{{.Title}}</span>
+    <!-- END PLACE PAGE CONTENT HERE -->
+  </div>
+  <!-- END CONTAINER FLUID -->
 </div>
-<!-- END PAGE CONTAINER -->
-
-
-<!-- BEGIN VENDOR JS -->
-<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
-<script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="assets/plugins/bootstrapv3/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-<script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
-<script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
-<script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
-<script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-<!-- END VENDOR JS -->
-
-<!-- BEGIN CORE TEMPLATE JS -->
-<script src="pages/js/pages.js" type="text/javascript"></script>
-<!-- END CORE TEMPLATE JS -->
-
-<!-- BEGIN PAGE LEVEL JS -->
-<script src="assets/js/scripts.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL JS -->
-
-</body>
-</html>
+<!-- END PAGE CONTENT -->
+{{template "_footer.html"}}

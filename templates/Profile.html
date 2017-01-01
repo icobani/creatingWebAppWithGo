@@ -1,0 +1,111 @@
+{{template "_head.html" .Title}}
+{{template "_sidebarmenu.html" }}
+{{template "_header.html" .ProfileMenu}}
+<!-- START PAGE CONTENT -->
+<div class="content">
+  <!-- START JUMBOTRON -->
+  <div class="jumbotron" data-pages="parallax">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="inner">
+        <!-- START BREADCRUMB -->
+        <ul class="breadcrumb">
+          <li>
+            <p>Performans HR</p>
+          </li>
+          <li><a href="#" class="active">Profil Bilgileri</a>
+          </li>
+        </ul>
+        <!-- END BREADCRUMB -->
+      </div>
+    </div>
+  </div>
+  <!-- END JUMBOTRON -->
+  <!-- START CONTAINER FLUID -->
+  <div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            Profil Bilgileri
+          </div>
+        </div>
+        <div class="panel-body">
+
+          <form action="/profile/save" method="post" class="" role="form">
+            <h5> Genel Bilgiler</h5>
+            <input type="hidden" name="Id" value="{{.Profile.User.Id}}">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>Isim</label>
+                  <input class="form-control" type="text" required name="FirstName" value="{{.Profile.User.FirstName}}">
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>Soy Isim</label>
+                  <input class="form-control" type="text" required name="LastName" value="{{.Profile.User.LastName}}">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>EMail</label>
+                  <input class="form-control" type="text" required name="Email" value="{{.Profile.User.Email}}">
+                </div>
+              </div>
+            </div>
+
+            <h5> İletişim Bilgileri</h5>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>Adres</label>
+                  <input class="form-control" type="text" required name="Address"
+                         value="{{.Profile.User.Stand.Address}}">
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>İl</label>
+                  <input class="form-control" type="text" required name="City" value="{{.Profile.User.Stand.City}}">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>İlçe</label>
+                  <input class="form-control" type="text" required name="State" value="{{.Profile.User.Stand.State}}">
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="form-group form-group-default required">
+                  <label>Posta Kodu</label>
+                  <input class="form-control" type="text" required name="Zip" value="{{.Profile.User.Stand.Zip}}">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <button class="btn btn-success btn-cons pull-right" type="submit">Kaydet</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- END PLACE PAGE CONTENT HERE -->
+  </div>
+  <!-- END CONTAINER FLUID -->
+</div>
+<!-- END PAGE CONTENT -->
+{{template "_footer.html"}}

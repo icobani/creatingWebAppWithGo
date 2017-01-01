@@ -10,7 +10,7 @@
 * Developer : ibrahimcobani
 *
 *******/
-package MVCViewLayer
+package ControllerLayer1
 
 import (
 	"net/http"
@@ -19,9 +19,9 @@ import (
 	"github.com/icobani/CreatingWebApp/controllers"
 )
 
-func UsingCollectionsinTemplatesMain() {
+func AMinimumControllerLayerMain() {
 	templates := populateTemplates4()
-	controllers.Register(templates)
+	Controllers.Register(templates)
 	http.ListenAndServe(":8000", nil)
 }
 

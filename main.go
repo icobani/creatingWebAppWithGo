@@ -13,7 +13,7 @@
 package main
 
 import (
-	"github.com/icobani/CreatingWebApp/MVCViewLayer"
+	"github.com/icobani/CreatingWebApp/ControllerLayer1"
 )
 
 func main()  {
@@ -25,5 +25,6 @@ func main()  {
 	//HTML_Templates.SubTemplateMain()
 	//MVCViewLayer.DeliveryStaticAssestMain()
 	//MVCViewLayer.CreatingViewModelAndSubTemplates()
-	MVCViewLayer.UsingCollectionsinTemplatesMain()
+	//MVCViewLayer.UsingCollectionsinTemplatesMain()
+	ControllerLayer1.AMinimumControllerLayerMain()
 }

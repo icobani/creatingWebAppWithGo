@@ -13,6 +13,7 @@
 package ViewModels
 
 type ProfileDropdownMenu struct {
+	Id            int32
 	HRefCode      string
 	MenuIconClass string
 	MenuTitle     string
@@ -21,18 +22,22 @@ type ProfileDropdownMenu struct {
 func GetProfileDropdownMenu() []ProfileDropdownMenu {
 	result := []ProfileDropdownMenu{
 		{
-			HRefCode:"#",
+			Id:1,
+			HRefCode:"/profile",
 			MenuIconClass:"pg-settings_small",
-			MenuTitle:"Sistem Ayarları"},
+			MenuTitle:"Profil Bilgileri"},
 		{
-			HRefCode : "#",
+			Id:2,
+			HRefCode : "/home",
 			MenuIconClass:"pg-outdent",
 			MenuTitle:"Geribildirim"},
 		{
-			HRefCode:"#",
+			Id:3,
+			HRefCode:"/items",
 			MenuIconClass:"pg-signals",
 			MenuTitle:"Yardım"},
 		{
+			Id:4,
 			HRefCode:"#",
 			MenuIconClass:"pg-save",
 			MenuTitle:"Kaydet"},

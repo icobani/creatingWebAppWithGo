@@ -17,6 +17,7 @@ import (
 "strings"
 "os"
 "bufio"
+	"fmt"
 )
 
 func index(w http.ResponseWriter, req *http.Request) {
@@ -59,6 +60,7 @@ func (this *MyHandler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		bufferedReader := bufio.NewReader(f)
 		bufferedReader.WriteTo(w)
 	} else {
+		fmt.Println("404")
 		w.WriteHeader(404)
 		w.Write([]byte("404 - " + http.StatusText(404)))
 	}

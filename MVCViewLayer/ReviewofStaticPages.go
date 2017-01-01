@@ -16,6 +16,7 @@ import (
 	"net/http"
 	"os"
 	"text/template"
+	"fmt"
 )
 
 func ReviewofStaticPagesMain() {
@@ -29,7 +30,8 @@ func ReviewofStaticPagesMain() {
 
 			if template != nil {
 				template.Execute(w, nil)
-			}else {
+			} else {
+				fmt.Println("404")
 				w.WriteHeader(404)
 			}
 		})

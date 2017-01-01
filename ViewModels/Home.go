@@ -12,20 +12,45 @@
 *******/
 package ViewModels
 
-import "fmt"
-
 type Home struct {
 	Title       string
 	Active      string
 	ProfileMenu []ProfileDropdownMenu
+	Profile     Profile
 }
 
-func GetHome() Home {
+func GetHome(Id int) Home {
+
 	result := Home{
-		Title : "Performanse HR Programı",
+		Title : "aExpence Masraf Yönetimi",
 		Active : "Home",
 		ProfileMenu : GetProfileDropdownMenu(),
+		Profile:GetProfile(),
 	}
-	fmt.Println(result)
+
+	switch Id {
+	case 3:
+		result.Title = "Ürünler"
+	case 1:
+		result.Title = "Profil Bilgileri"
+	}
+
+	return result
+}
+
+type Login struct {
+	Title  string
+	Active string
+	ProfileMenu []ProfileDropdownMenu
+	Profile     Profile
+}
+
+func GetLogin() Login {
+	result := Login{
+		Title:"aExpence Masraf Yönetimi",
+		Active:"",
+		ProfileMenu : GetProfileDropdownMenu(),
+		Profile:GetProfile(),
+	}
 	return result
 }

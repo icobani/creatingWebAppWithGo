@@ -39,6 +39,7 @@ func CreatingViewModelAndSubTemplates() {
 				fmt.Println(context)
 				template.Execute(w, context)
 			} else {
+				fmt.Println("404")
 				w.WriteHeader(404)
 			}
 		})
@@ -81,6 +82,7 @@ func serveResource2(w http.ResponseWriter, req *http.Request) {
 		br := bufio.NewReader(f)
 		br.WriteTo(w)
 	} else {
+		fmt.Println("404")
 		w.WriteHeader(404)
 	}
 }

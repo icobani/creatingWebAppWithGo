@@ -1,0 +1,33 @@
+{{template "_head.html" .Title}}
+{{template "_sidebarmenu.html" }}
+{{template "_header.html" .ProfileMenu}}
+<!-- START PAGE CONTENT -->
+<div class="content">
+  <!-- START JUMBOTRON -->
+  <div class="jumbotron" data-pages="parallax">
+    <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+      <div class="inner">
+        <!-- START BREADCRUMB -->
+        <ul class="breadcrumb">
+          <li>
+            <p>Performans HR</p>
+          </li>
+          <li><a href="#" class="active">Items</a>
+          </li>
+        </ul>
+        <!-- END BREADCRUMB -->
+      </div>
+    </div>
+  </div>
+  <!-- END JUMBOTRON -->
+  <!-- START CONTAINER FLUID -->
+  <div class="container-fluid container-fixed-lg">
+    <!-- BEGIN PlACE PAGE CONTENT HERE -->
+    <span {{if eq .Active "home"}}class="thumbnail-wrapper d32 circular inline m-t-5"{{end}}>{{.Title}}</span>
+    <!-- END PLACE PAGE CONTENT HERE -->
+  </div>
+  <!-- END CONTAINER FLUID -->
+</div>
+<!-- END PAGE CONTENT -->
+{{template "_footer.html"}}
+

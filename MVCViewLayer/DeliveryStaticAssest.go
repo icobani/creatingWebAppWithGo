@@ -18,6 +18,7 @@ import (
 	"text/template"
 	"strings"
 	"bufio"
+	"fmt"
 )
 
 func DeliveryStaticAssestMain() {
@@ -32,6 +33,7 @@ func DeliveryStaticAssestMain() {
 			if template != nil {
 				template.Execute(w, nil)
 			} else {
+				fmt.Println("404")
 				w.WriteHeader(404)
 			}
 		})
@@ -74,6 +76,7 @@ func serveResource(w http.ResponseWriter, req *http.Request) {
 		br := bufio.NewReader(f)
 		br.WriteTo(w)
 	} else {
+		fmt.Println("404")
 		w.WriteHeader(404)
 	}
 }

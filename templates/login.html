@@ -1,0 +1,85 @@
+{{template "_head.html" .Title}}
+
+<!-- START PAGE CONTENT -->
+
+<div class="login-wrapper ">
+  <!-- START Login Background Pic Wrapper-->
+  <div class="bg-pic">
+    <!-- START Background Pic-->
+    <img src="assets/img/demo/Istanbul_taksi.jpg" data-src="assets/img/demo/Istanbul_taksi.jpg"
+         data-src-retina="assets/img/demo/Istanbul_taksi.jpg" alt="" class="lazy">
+    <!-- END Background Pic-->
+    <!-- START Background Caption-->
+    <div class="bg-caption pull-bottom sm-pull-bottom text-white p-l-20 m-b-20">
+      <h2 class="semi-bold text-white">
+        aExpence bir masraf yönetim uygulamasıdır.</h2>
+      <p class="small">
+        B1 Yönetim Sistemleri Yazılım ve Danışmanlık Limited Şirketi © 2011-2016 B1Digital.
+      </p>
+    </div>
+    <!-- END Background Caption-->
+  </div>
+  <!-- END Login Background Pic Wrapper-->
+  <!-- START Login Right Container-->
+  <div class="login-container bg-white">
+    <div class="p-l-50 m-l-20 p-r-50 m-r-20 p-t-50 m-t-30 sm-p-l-15 sm-p-r-15 sm-p-t-40">
+      <img src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png" data-src-retina="assets/img/logo_2x.png"
+           width="78" height="22">
+      <p class="p-t-35">aExpence kullanıcınızla giriş yapın.</p>
+      <!-- START Login Form -->
+      <form id="form-login" class="p-t-15" role="form" method="post" action="">
+        <!-- START Form Control-->
+        <div class="form-group form-group-default">
+          <label>KULLANICI</label>
+          <div class="controls">
+            <input type="text" name="username" placeholder="Kullanıcı Adı" class="form-control" required>
+          </div>
+        </div>
+        <!-- END Form Control-->
+        <!-- START Form Control-->
+        <div class="form-group form-group-default">
+          <label>ŞİFRE</label>
+          <div class="controls">
+            <input type="password" class="form-control" name="password" placeholder="Kimlik Bilgileri" required>
+          </div>
+        </div>
+        <!-- START Form Control-->
+        <div class="row">
+          <div class="col-md-6 no-padding">
+            <div class="checkbox ">
+              <input type="checkbox" value="1" id="checkbox1">
+              <label for="checkbox1">Beni hatırla</label>
+            </div>
+          </div>
+          <div class="col-md-6 text-right">
+            <a href="#" class="text-info small">Yardım mı lazım ? Sorun</a>
+          </div>
+        </div>
+        <!-- END Form Control-->
+        <button class="btn btn-primary btn-cons m-t-10" type="submit">Giriş</button>
+      </form>
+      <!--END Login Form-->
+      <div class="pull-bottom sm-pull-bottom">
+        <div class="m-b-30 p-r-80 sm-m-t-20 sm-p-r-15 sm-p-b-20 clearfix">
+          <div class="col-sm-3 col-md-2 no-padding">
+            <img alt="" class="m-t-5" data-src="assets/img/demo/pages_icon.png"
+                 data-src-retina="assets/img/demo/pages_icon_2x.png" height="60" src="assets/img/demo/pages_icon.png"
+                 width="60">
+          </div>
+          <div class="col-sm-9 no-padding m-t-10">
+            <p>
+              <small>
+                Bir aExpence hesabı oluşturmak istermisiniz. <a href="#" class="text-info">Hesap Oluştur.</a>
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Login Right Container-->
+</div>
+
+
+<!-- END PAGE CONTENT -->
+{{template "_footer.html"}}
