@@ -34,10 +34,20 @@ func (this *homeController)login(w http.ResponseWriter, req *http.Request) {
 	responseWriter.Header().Add("Content-Type", "text/html")
 
 	if req.Method == "POST" {
-		email := req.FormValue("email")
+		email := req.FormValue("username")
 		password := req.FormValue("password")
 
-		member, err := Models.Getmember(email, password)
+		member, err := Models.GetMember(email, password)
+
+		if err == nil {
+			session, err1 := Models.CreateSession(member)
+			if err1 == nil {
+				var cookie http.Cookie
+				cookie.Name = "sessionId"
+				cookie.Value = session.SessionId()
+				responseWriter.Header().Add("Set-Cookie", cookie.String())
+			}
+		}
 	}
 
 	vm := ViewModels.GetLogin()
